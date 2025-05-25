@@ -1,0 +1,39 @@
+# Visual Studio folders
+.vs/
+x64/
+Debug/
+Release/
+ipch/
+
+# Build results
+*.obj
+*.exe
+*.pch
+*.pdb
+*.ilk
+*.log
+
+# Visual Studio project user-specific files
+*.vcxproj.user
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.cachefile
+
+# CMake or other build systems (if used)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Backup and temporary files
+*.bak
+*.tmp
+*~
+*.swp
+
+# Auto-generated files (optional, depending on use)
+*.tlog
+*.lastbuildstate
+*.idb
