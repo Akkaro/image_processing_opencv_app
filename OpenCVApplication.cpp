@@ -550,7 +550,7 @@ void color_inverse() {
 
 void driver_function_l1() {
 
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/Lab1/L1/PI-Images/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat img = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 	int op;
 	do
 	{
@@ -749,8 +749,8 @@ void hsv_conversion(Mat& img) {
 
 void driver_function_l2() {
 
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/Lab1/L1/PI-Images/Lena_24bits.bmp", IMREAD_COLOR);
-	Mat img_gray = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/Lab1/L1/PI-Images/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat img = imread("./Images/Lena_24bits.bmp", IMREAD_COLOR);
+	Mat img_gray = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 	int op;
 	do
 	{
@@ -1030,8 +1030,8 @@ void floyd_steinberg_dithering(Mat& img) {
 
 void driver_function_l3() {
 
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/Lab1/L1/PI-Images/Lena_24bits.bmp", IMREAD_COLOR);
-	Mat img_gray = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/Lab1/L1/PI-Images/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat img = imread("./Images/Lena_24bits.bmp", IMREAD_COLOR);
+	Mat img_gray = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 	int op;
 	do
 	{
@@ -1205,7 +1205,7 @@ void compute_object_properties(Mat& img) {
 
 void driver_function_l4() {
 
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L4/PI-L4/trasaturi_geom.bmp", IMREAD_COLOR);
+	Mat img = imread("./Images/PI-L4/trasaturi_geom.bmp", IMREAD_COLOR);
 
 	int op;
 	do
@@ -1476,7 +1476,7 @@ void two_pass_component_labeling(Mat& img) {
 }
 void driver_function_l5() {
 
-	Mat img_gray = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L5/PI-L5/crosses.bmp", IMREAD_GRAYSCALE);
+	Mat img_gray = imread("./Images/PI-L5/crosses.bmp", IMREAD_GRAYSCALE);
 
 	int op;
 	do
@@ -1597,7 +1597,7 @@ found_start:
 }
 
 void draw_from_chain_code(Mat& img) {
-	String text_path = "C:/Personal stuff/Year 3 Sem 2/IP/Labs/L6/PI-L6/reconstruct.txt";
+	String text_path = "./Images/PI-L6/reconstruct.txt";
 
 	ifstream file(text_path);
 	if (!file.is_open()) {
@@ -1646,8 +1646,8 @@ void draw_from_chain_code(Mat& img) {
 
 void driver_function_l6() {
 
-	Mat img_gray = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L6/PI-L6/triangle_up.bmp", IMREAD_GRAYSCALE);
-	Mat img_gray_bg = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L6/PI-L6/gray_background.bmp", IMREAD_COLOR);
+	Mat img_gray = imread("./Images/PI-L6/triangle_up.bmp", IMREAD_GRAYSCALE);
+	Mat img_gray_bg = imread("./Images/PI-L6/gray_background.bmp", IMREAD_COLOR);
 	int op;
 	do
 	{
@@ -1703,7 +1703,7 @@ Mat dilation(Mat& src) {
 }
 
 void dilation_driver(int n_times) {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L7/PI-L7/Morphological_Op_Images/1_Dilate/mon1thr1_bw.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L7/Morphological_Op_Images/1_Dilate/mon1thr1_bw.bmp", IMREAD_GRAYSCALE);
 
 	Mat dst = Mat(src);
 	for (int i = 0; i < n_times; i++) {
@@ -1744,7 +1744,7 @@ Mat erosion(Mat& src) {
 }
 
 void erosion_driver(int n_times) {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L7/PI-L7/Morphological_Op_Images/2_Erode/mon1thr1_bw.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L7/Morphological_Op_Images/2_Erode/mon1thr1_bw.bmp", IMREAD_GRAYSCALE);
 
 	Mat dst = Mat(src);
 	for (int i = 0; i < n_times; i++) {
@@ -1757,7 +1757,7 @@ void erosion_driver(int n_times) {
 }
 
 void opening_driver(int n_times) {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L7/PI-L7/Morphological_Op_Images/3_Open/cel4thr3_bw.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L7/Morphological_Op_Images/3_Open/cel4thr3_bw.bmp", IMREAD_GRAYSCALE);
 
 	Mat dst = Mat(src);
 	for (int i = 0; i < n_times; i++) {
@@ -1770,7 +1770,7 @@ void opening_driver(int n_times) {
 	waitKey(0);
 }
 void closing_driver(int n_times) {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L7/PI-L7/Morphological_Op_Images/4_Close/art4_bw.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L7/Morphological_Op_Images/4_Close/art4_bw.bmp", IMREAD_GRAYSCALE);
 
 	Mat dst = Mat(src);
 	for (int i = 0; i < n_times; i++) {
@@ -1867,7 +1867,7 @@ void morphological_operations_driver_n_time() {
 }
 
 void boundary_extraction() {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L7/PI-L7/Morphological_Op_Images/5_BoundaryExtraction/wdg2thr3_bw.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L7/Morphological_Op_Images/5_BoundaryExtraction/wdg2thr3_bw.bmp", IMREAD_GRAYSCALE);
 
 	int height = src.rows;
 	int width = src.cols;
@@ -1909,7 +1909,7 @@ void boundary_extraction() {
 }
 
 void region_filling() {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L7/PI-L7/Morphological_Op_Images/6_RegionFilling/reg1neg1_bw.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L7/Morphological_Op_Images/6_RegionFilling/reg1neg1_bw.bmp", IMREAD_GRAYSCALE);
 
 	int height = src.rows;
 	int width = src.cols;
@@ -2010,7 +2010,7 @@ void driver_function_l7() {
 }
 
 void l8_e1() {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L8/PI-L8/balloons.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L8/balloons.bmp", IMREAD_GRAYSCALE);
 
 	int height = src.rows;
 	int width = src.cols;
@@ -2058,7 +2058,7 @@ void l8_e1() {
 }
 
 void automatic_threshold() {
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/Lab1/OpenCVApplication-VS2022_OCV490_basic/Images/eight.bmp", IMREAD_GRAYSCALE);
+	Mat img = imread("./Images/eight.bmp", IMREAD_GRAYSCALE);
 
 	int height = img.rows;
 	int width = img.cols;
@@ -2218,7 +2218,7 @@ Mat histogramSlide(const Mat& img) {
 }
 
 void runHistogramTransforms() {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L8/PI-L8/balloons.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L8/balloons.bmp", IMREAD_GRAYSCALE);
 
 	imshow("Original Image", src);
 
@@ -2228,7 +2228,7 @@ void runHistogramTransforms() {
 }
 
 Mat histogramEqualization() {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L8/PI-L8/balloons.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/PI-L8/balloons.bmp", IMREAD_GRAYSCALE);
 
 
 	int totalPixels = src.rows * src.cols;
@@ -2384,7 +2384,7 @@ Mat applyCustomConvolutionFilter(const Mat& src, const Mat& kernel) {
 
 void driver_function_l9_e1() {
 
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L9/PI-L9/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 
 	Mat meanKernel = (Mat_<float>(3, 3) <<
 		1, 1, 1,
@@ -2434,7 +2434,7 @@ enum FilterType {
 Mat generic_frequency_domain_filter(Mat src, FilterType filterType)
 {
 
-	// Discrete Fourier Transform: https://docs.opencv.org/4.2.0/d8/d01/tutorial_discrete_fourier_transform.html
+	// Discrete Fourier Transform
 	int height = src.rows;
 	int width = src.cols;
 
@@ -2456,11 +2456,10 @@ Mat generic_frequency_domain_filter(Mat src, FilterType filterType)
 	// the magnitude is useful for visualization
 
 	Mat mag, phi;
-	magnitude(channels[0], channels[1], mag); // https://docs.opencv.org/master/d2/de8/group__core__array.html#ga6d3b097586bca4409873d64a90fe64c3
-	phase(channels[0], channels[1], phi); // https://docs.opencv.org/master/d2/de8/group__core__array.html#ga9db9ca9b4d81c3bde5677b8f64dc0137
+	magnitude(channels[0], channels[1], mag);
+	phase(channels[0], channels[1], phi);
 
 
-	// TODO: Display here the log of magnitude (Add 1 to the magnitude to avoid log(0)) (see image 9.4e))
 	// do not forget to normalize (you can use the normalize function from OpenCV)
 	Mat logMag;
 	log(mag + 1, logMag); // log(1 + magnitude)
@@ -2531,7 +2530,7 @@ Mat generic_frequency_domain_filter(Mat src, FilterType filterType)
 
 void driver_function_l9_e2()
 {
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L9/PI-L9/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat img = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 
 
 	vector<pair<FilterType, string>> filters = {
@@ -2616,7 +2615,7 @@ Mat applyMedianFilter(const Mat src, int w) {
 
 void driver_function_l10_e1()
 {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L9/PI-L9/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 
 	int op;
 
@@ -2685,7 +2684,7 @@ Mat applyGaussianFilter(const Mat src, int w) {
 
 void driver_function_l10_e2()
 {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L9/PI-L9/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 
 	int op;
 
@@ -2765,7 +2764,7 @@ Mat applyGaussianFilter1D(const Mat src, int w) {
 
 void driver_function_l10_e3()
 {
-	Mat src = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L9/PI-L9/cameraman.bmp", IMREAD_GRAYSCALE);
+	Mat src = imread("./Images/cameraman.bmp", IMREAD_GRAYSCALE);
 
 	int op;
 
@@ -2812,204 +2811,6 @@ void driver_function_l10() {
 
 
 	} while (op != 0);
-}
-
-Mat create_fx() {
-	Mat fx = Mat(3, 3, CV_32SC1);
-
-	fx.at<int>(0, 0) = -1;
-	fx.at<int>(0, 1) = 0;
-	fx.at<int>(0, 2) = 1;
-
-	fx.at<int>(1, 0) = -2;
-	fx.at<int>(1, 1) = 0;
-	fx.at<int>(1, 2) = 2;
-
-	fx.at<int>(2, 0) = -1;
-	fx.at<int>(2, 1) = 0;
-	fx.at<int>(2, 2) = 1;
-
-	return fx;
-}
-
-Mat create_fy() {
-	Mat fy = Mat(3, 3, CV_32SC1);
-
-	fy.at<int>(0, 0) = 1;
-	fy.at<int>(0, 1) = 2;
-	fy.at<int>(0, 2) = 1;
-
-	fy.at<int>(1, 0) = 0;
-	fy.at<int>(1, 1) = 0;
-	fy.at<int>(1, 2) = 0;
-
-	fy.at<int>(2, 0) = -1;
-	fy.at<int>(2, 1) = -2;
-	fy.at<int>(2, 2) = -1;
-
-	return fy;
-}
-
-Mat applyConvolutionFilterWithoutScaling(const Mat& src, const Mat& kernel) {
-	int kRows = kernel.rows;
-	int kCols = kernel.cols;
-	int kCenterY = kRows / 2;
-	int kCenterX = kCols / 2;
-
-	Mat dst = Mat::zeros(src.size(), CV_32SC1);
-
-	// Apply convolution
-	for (int y = kCenterY; y < src.rows - kCenterY; ++y) {
-		for (int x = kCenterX; x < src.cols - kCenterX; ++x) {
-			float acc = 0.0f;
-
-			for (int i = 0; i < kRows; ++i) {
-				for (int j = 0; j < kCols; ++j) {
-					int yy = y + i - kCenterY;
-					int xx = x + j - kCenterX;
-					acc += src.at<uchar>(yy, xx) * kernel.at<int>(i, j);
-				}
-			}
-
-			dst.at<float>(y, x) = acc;
-		}
-	}
-
-	return dst;
-
-}
-
-Mat computeGradientMagnitude(const Mat& dx, const Mat& dy, Mat& direction) {
-	Mat mag(dx.size(), CV_32FC1);
-	direction = Mat(dx.size(), CV_32FC1);
-
-	for (int y = 0; y < dx.rows; ++y) {
-		for (int x = 0; x < dx.cols; ++x) {
-			float gx = dx.at<float>(y, x);
-			float gy = dy.at<float>(y, x);
-			mag.at<float>(y, x) = sqrt(gx * gx + gy * gy);
-			direction.at<float>(y, x) = atan2(gy, gx) + CV_PI; // shift from [-π, π] to [0, 2π]
-		}
-	}
-
-	// Normalize to [0, 255]
-	double maxVal;
-	minMaxLoc(mag, nullptr, &maxVal);
-	mag.convertTo(mag, CV_8UC1, 255.0 / maxVal);
-
-	return mag;
-}
-
-Mat nonMaximaSuppression(const Mat& mag, const Mat& direction) {
-	int rows = mag.rows;
-	int cols = mag.cols;
-	Mat suppressed = Mat::zeros(rows, cols, CV_8UC1);
-
-	for (int y = 1; y < rows - 1; ++y) {
-		for (int x = 1; x < cols - 1; ++x) {
-			float angle = direction.at<float>(y, x) * 180.0 / CV_PI;  // Convert to degrees
-			if (angle < 0) angle += 180;  // Normalize to [0,180)
-
-			uchar currMag = mag.at<uchar>(y, x);
-			uchar mag1 = 0, mag2 = 0;
-
-			// Determine the direction sector and neighbors
-			if ((angle >= 0 && angle < 22.5) || (angle >= 157.5 && angle < 180)) {
-				// 0° (horizontal)
-				mag1 = mag.at<uchar>(y, x - 1);
-				mag2 = mag.at<uchar>(y, x + 1);
-			}
-			else if (angle >= 22.5 && angle < 67.5) {
-				// 45° (↙↗)
-				mag1 = mag.at<uchar>(y - 1, x + 1);
-				mag2 = mag.at<uchar>(y + 1, x - 1);
-			}
-			else if (angle >= 67.5 && angle < 112.5) {
-				// 90° (vertical)
-				mag1 = mag.at<uchar>(y - 1, x);
-				mag2 = mag.at<uchar>(y + 1, x);
-			}
-			else if (angle >= 112.5 && angle < 157.5) {
-				// 135° (↖↘)
-				mag1 = mag.at<uchar>(y - 1, x - 1);
-				mag2 = mag.at<uchar>(y + 1, x + 1);
-			}
-
-			if (currMag >= mag1 && currMag >= mag2) {
-				suppressed.at<uchar>(y, x) = currMag;
-			}
-			else {
-				suppressed.at<uchar>(y, x) = 0;
-			}
-		}
-	}
-
-	return suppressed;
-}
-
-Mat compute_magnitude(Mat& fx, Mat& fy) {
-	Mat dst(fx.size(), CV_32FC1);
-
-	for (int i = 0; i < fx.rows; ++i) {
-		for (int j = 0; j < fx.cols; ++j) {
-			float gx = fx.at<float>(i, j);
-			float gy = fy.at<float>(i, j);
-			dst.at<float>(i, j) = std::sqrt(gx * gx + gy * gy);
-		}
-	}
-
-	// Normalize to 0–255 by dividing by 4√2
-	dst /= (4.0f * std::sqrt(2.0f));
-
-	// Convert to uchar for display
-	Mat finalDst;
-	dst.convertTo(finalDst, CV_8UC1);
-	return finalDst;
-}
-
-Mat non_max_suppression(Mat& magnitude, Mat& fx, Mat& fy) {
-	Mat suppressed = Mat::zeros(magnitude.size(), CV_8UC1);
-
-	for (int y = 1; y < magnitude.rows - 1; ++y) {
-		for (int x = 1; x < magnitude.cols - 1; ++x) {
-			float gx = fx.at<float>(y, x);
-			float gy = fy.at<float>(y, x);
-			float theta = atan2(gy, gx) + CV_PI; // [0, 2π]
-			int dir = static_cast<int>(round(theta / (CV_PI / 4.0))) % 8;
-			int quantized = dir % 4;
-
-			uchar current = magnitude.at<uchar>(y, x);
-			uchar neighbor1 = 0, neighbor2 = 0;
-
-			switch (quantized) {
-			case 0: // horizontal 
-				neighbor1 = magnitude.at<uchar>(y, x - 1);
-				neighbor2 = magnitude.at<uchar>(y, x + 1);
-				break;
-			case 1: // diagonal 
-				neighbor1 = magnitude.at<uchar>(y - 1, x + 1);
-				neighbor2 = magnitude.at<uchar>(y + 1, x - 1);
-				break;
-			case 2: // vertical 
-				neighbor1 = magnitude.at<uchar>(y - 1, x);
-				neighbor2 = magnitude.at<uchar>(y + 1, x);
-				break;
-			case 3: // diagonal inverse
-				neighbor1 = magnitude.at<uchar>(y - 1, x - 1);
-				neighbor2 = magnitude.at<uchar>(y + 1, x + 1);
-				break;
-			}
-
-			if (current >= neighbor1 && current >= neighbor2) {
-				suppressed.at<uchar>(y, x) = current;
-			}
-			else {
-				suppressed.at<uchar>(y, x) = 0;
-			}
-		}
-	}
-
-	return suppressed;
 }
 
 Mat apply_sobel_filter(Mat& img, Mat sobel1) {
@@ -3266,11 +3067,7 @@ Mat cannyEdgeDetection(const Mat& image) {
 }
 
 void driver_function_l11() {
-	Mat img = imread("C:/Personal stuff/Year 3 Sem 2/IP/Labs/L1/PI-Images/saturn.bmp", IMREAD_GRAYSCALE);
-	if (img.empty()) {
-		std::cout << "Error loading image!" << std::endl;
-		return;
-	}
+	Mat img = imread("./Images/saturn.bmp", IMREAD_GRAYSCALE);
 
 	Mat edges = cannyEdgeDetection(img);
 
@@ -3291,10 +3088,10 @@ void driver_function_l11() {
 
 	Mat fx = apply_sobel_filter(smoothed, sobelX);
 	Mat fy = apply_sobel_filter(smoothed, sobelY);
-	Mat magnitude = compute_magnitude(fx, fy);
+	Mat magnitude = revised_compute_magnitude(fx, fy);
 	imshow("Gradient Magnitude", magnitude);
 
-	Mat suppressed = non_max_suppression(magnitude, fx, fy);
+	Mat suppressed = improved_non_max_suppression(magnitude, fx, fy);
 	imshow("Non-Maximum Suppression", suppressed);
 
 	Mat thresholded = adaptiveThresholding(suppressed);
